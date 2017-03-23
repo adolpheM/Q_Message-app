@@ -1,0 +1,17 @@
+<h1>Message </h1>
+
+
+<%= form_tag "/messages/#{@message.id}", method: :patch do %>
+<div>
+    Title <input type="text" name="title" value="<%= @message.title %>"><br>
+  </div><br>
+  
+  Message
+  <div>
+    <textarea class="text_box" type="text" name="message"><%=@message.message%></textarea>
+  </div>
+
+  <div>
+    <input type="submit" value="Update Message">
+  </div>
+<% end %>

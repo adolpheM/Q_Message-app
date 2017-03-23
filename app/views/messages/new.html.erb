@@ -1,0 +1,28 @@
+<h1>Message</h1>
+
+<%= form_tag "/messages", method: :post do %>
+  <div>
+    Title <input type="text" name="title"><br>
+  </div>
+
+  <div>
+    
+  </div><br>
+
+  <div>
+    
+  </div><br>
+  
+  Message
+  <div>
+    <textarea class="text_box" type="text" name="message"></textarea>
+  </div>
+
+  <div>
+      <input type="hidden" name="group_id" value="<%=@group.id%>">
+    </div>
+
+  <div>
+    <input type="submit" value="Create Message"> 
+  </div>
+<% end %>

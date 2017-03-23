@@ -1,0 +1,6 @@
+<h1>Contact</h1>
+
+<h2><%=@contact.name%></h2>
+<h2><%=@contact.phone_number%></h2>
+
+<%= link_to "delete Contact", "/contacts/#{@contact.id}", method: :delete %>
