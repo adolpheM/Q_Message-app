@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get "/", to: 'hosts#index'
   
   get "/signup", to: 'users#new' 
   post "/users", to: 'users#create'
@@ -21,8 +23,8 @@ Rails.application.routes.draw do
   post "/groups", to: 'groups#create'
 
   get "/messages/new", to: 'messages#new'
-  get "/messages/:id", to: 'messages#show'
   post "/messages", to: 'messages#create'
+  get "/messages/:id", to: 'messages#show'
   get "/messages/:id/edit", to: 'messages#edit'
   patch "/messages/:id", to: 'messages#update'
 

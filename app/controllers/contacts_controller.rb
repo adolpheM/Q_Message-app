@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
 
   def index
-    @contacts = Contact.all 
+    
   end
 
   def new
@@ -13,17 +13,17 @@ class ContactsController < ApplicationController
   end
 
   def create
-    contacts = params[:contacts]
+    @contacts = params[:contacts]
 
-    contacts.each do |contact|
+    @contacts.each do |contact|
       name = contact[:name]
       phone_number = contact[:phone_number]
       contact = Contact.new({name: name, phone_number: phone_number, user_id: current_user.id})
       if contact.save
         flash[:success] = "Contacts Succesfully created"
+        redirect_to "/contacts"
       end 
     end
-    redirect_to "/contacts"
   end
 
   def edit 
@@ -37,7 +37,7 @@ class ContactsController < ApplicationController
     @contact.save
 
     flash[:success] = "Contact Succesfully Updated"
-    redirect_to "/contacts/#{@contact.id}"
+    redirect_to "/contacts/#{@contacts.id}"
   end
 
   def destroy

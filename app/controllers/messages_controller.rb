@@ -12,13 +12,23 @@ class MessagesController < ApplicationController
     title = params[:title]
     message = params[:message]
     group_id = params[:group_id]
-
-    @message = Message.new({title: title, message: message, group_id: group_id})
+  
+    @message = Message.new(title: title, message: message, group_id: group_id)
 
     if @message.save
-      flash[:success] = "Message Created"
-      redirect_to "/messages/#{@message.id}"
+      message_content = @message.message
+
+      url = "https://bulksms.vsms.net/eapi/submission/send_batch/1/1.0?username=#{ENV['username']}&password=#{ENV['password']}&batch_data=msisdn,message"
+
+      @message.group.contacts.each do |contact|
+        url += "%0a%22#{contact.phone_number}%22,%22#{message_content}%22"
+
+      response = Unirest.post(url).body
+      dfg response
+      end
     end 
+
+      flash[:success] = "Message Sent"
   end
 
   def edit
@@ -36,5 +46,5 @@ class MessagesController < ApplicationController
     redirect_to "/messages/#{@message.id}"
   end
 
-
 end
+

@@ -1,21 +1,23 @@
 <h1>Enter Your Contacts</h1>
 
 <%= form_tag "/contacts", method: :post do %>
-  <% 5.times do %>
+  <% 1.times do %>
     <div>
       Name
-      <input type="name" name="contacts[][name]">  
+      <input type="name" name="contacts[][name]" tabindex="1">  
     </div>
     
     <div>
       Phone Number
-      <input type="tel" name="contacts[][phone_number]">   
+      <input type="tel" name="contacts[][phone_number]" tabindex="2">   
     </div>
     <br>
 
+      <!-- <input type="button" id="new_box" value="" name=""> -->
+
   <% end %>
   <div>
-    <input type="submit" name="Create Contacts">
+    <input type="submit" name="Create Contacts" tabindex="3">
   </div>
 <% end %>
 

@@ -8,7 +8,7 @@
 
     </tr>
 
-    <%@contacts.each_with_index do |contact, index|%>
+    <%current_user.contacts.each_with_index do |contact, index|%>
     <tr>
       <td>
       <%= contact.name %>
@@ -21,6 +21,9 @@
       <td>
         
         <%= check_box_tag "contact_ids[]", contact.id, checked = false %>   
+      </td>
+
+      <td>
       </td>
     </tr>
     <% end %>

@@ -9,16 +9,17 @@
 </head>
 
 <body>
+  
   <%flash.each do |name, message| %>
   <div class="alert alert-<%= name %>" role="alert"><%= message %></div>
   <% end %>
 
   <ul> 
     <% if current_user %>
-      <li><%= link_to "Logout", "/logout", method: :delete %></li>
+      <div align="right"><%= button_to "Logout", "/logout", method: :delete %></div>
     <% else %>
-      <li><%= link_to "Sign up ", "/signup", method: :get %></li>
-      <li><%= link_to "Sing in", "/login", method: :get %> </li> 
+      <div class="signup"><%= button_to "Sign up ", "/signup", method: :get %></div>
+      <div class="login"><%= button_to "Sign in", "/login", method: :get %> </div> 
     <% end %>
   </ul>
   
