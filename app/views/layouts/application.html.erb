@@ -1,32 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>QMessageApp</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
+
 <body>
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
+                </a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <% if current_user %>
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll"><%= button_to "Logout", "/logout", method: :delete %></a>
+
+                    </li>
+                    <% else %>
+                    <li>
+                        <a class="page-scroll"><%= button_to "Sign up ", "/signup", method: :get %></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll"><%= button_to "Sign in", "/login", method: :get %></a>
+                    </li>
+                    <li>
+                      <% end %>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
   
   <%flash.each do |name, message| %>
   <div class="alert alert-<%= name %>" role="alert"><%= message %></div>
   <% end %>
-
-  <ul> 
-    <% if current_user %>
-      <div align="right"><%= button_to "Logout", "/logout", method: :delete %></div>
-    <% else %>
-      <div class="signup"><%= button_to "Sign up ", "/signup", method: :get %></div>
-      <div class="login"><%= button_to "Sign in", "/login", method: :get %> </div> 
-    <% end %>
-  </ul>
   
 
 
   <%= yield %>
 
+  <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; QMessage 2017</p>
+        </div>
+    </footer>
 
 </body>
 </html>
