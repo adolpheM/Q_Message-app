@@ -9,8 +9,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">QMessage</h1>
-                        <p class="intro-text">A quick, simple, online sms sending app.
+                        <h1 class="brand-heading" align="center">QMessage</h1>
+                        <p class="intro-text" align="center">A quick, simple, online sms sending app.
                             <br>Developed to ease communication.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -24,46 +24,34 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-8">
                 <h2>About QMessage</h2>
-                <p> QMessage is an web application that helps you to send sms either one or more to one person or a group of people.</p>
-                <p>This web app is mainly used for communication from one person to a large number of people</a> This can be events invitation, </a>.</p>
-                <p>QMessage includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <center> QMessage is an web application that helps you to send sms either one or more to one person or a group of people.</center><br>
+                <center>This web app is mainly used for communication from one person to a large number of people</a> This can be events invitation, meeting communicaton, or announcements.</a></center><br>
+                <center>QMessage allows users to signup and have access to create their contacts, create group for their contacts, create message, and send messages to their group containing many contacts.</center>
             </div>
         </div>
     </section>
-
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download QMessage</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
+                <h2>Contact QMessage</h2>
+                <center>Feel free to email us to provide some feedback on our web app, give us suggestions for new features, or to just say hello!</center>
+                <!-- <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p> -->
                 <ul class="list-inline banner-social-buttons">
-                    <li>
+                    <!-- <li>
                         <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        <a href="https://github.com/QMessage" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -79,5 +67,8 @@
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <%= yield %>
+
 
 </body>

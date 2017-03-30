@@ -1,24 +1,24 @@
-<h1>Enter Your Contacts</h1>
+<h1 style="color: white" >Enter Your Contacts</h1>
 
 <%= form_tag "/contacts", method: :post do %>
-  <% 1.times do %>
-    <div>
-      Name
-      <input type="name" name="contacts[][name]" tabindex="1">  
-    </div>
+  <div id="contactInputs">
     
-    <div>
-      Phone Number
-      <input type="tel" name="contacts[][phone_number]" tabindex="2">   
-    </div>
-    <br>
+  </div>
 
-      <!-- <input type="button" id="new_box" value="" name=""> -->
+<% end %>
+<button id="addContact" style="color: blue" >Add Contact</button>
 
-  <% end %>
+<script type="text/javascript">
+  
+  $("#addContact").click(function() {
+    $("#contactInputs").append("<div>Name<input type='name' name='contacts[][name]' tabindex='1'></div><div>Phone Number<input type='tel' name='contacts[][phone_number]'></div><br>");
+  });
+
+
+
+
+
+</script>
   <div>
     <input type="submit" name="Create Contacts" tabindex="3">
   </div>
-<% end %>
-
-

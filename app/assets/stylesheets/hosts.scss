@@ -1,3 +1,20 @@
-// Place all the styles related to the hosts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content-section {
+  // vertical-align: middle;
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  color: #ADD8E6;
+}
+
+.intro-text {
+  color: #ADD8E6;
+}
+
+.brand-heading {
+  color: #DCDCDC;
+}

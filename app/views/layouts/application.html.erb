@@ -13,18 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+   
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,17 +44,10 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll"><%= button_to "Logout", "/logout", method: :delete %></a>
-
-                    </li>
+                    <li><%= button_to "Logout", "/logout", method: :delete %></li>
                     <% else %>
-                    <li>
-                        <a class="page-scroll"><%= button_to "Sign up ", "/signup", method: :get %></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll"><%= button_to "Sign in", "/login", method: :get %></a>
-                    </li>
+                    <li><%= button_to "Sign up ", "/signup", method: :get %></li>
+                    <li><%= button_to "Sign in", "/login", method: :get %></li>
                     <li>
                       <% end %>
                     </li>
@@ -84,11 +66,11 @@
 
   <%= yield %>
 
-  <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; QMessage 2017</p>
-        </div>
-    </footer>
 
 </body>
 </html>
+<footer style="padding-bottom: 0px">
+    <div class="container text-center">
+        <p>Copyright &copy; QMessage 2017</p>
+    </div>
+</footer>
