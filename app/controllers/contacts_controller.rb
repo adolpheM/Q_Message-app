@@ -21,9 +21,9 @@ class ContactsController < ApplicationController
       contact = Contact.new({name: name, phone_number: phone_number, user_id: current_user.id})
       if contact.save
         flash[:success] = "Contacts Succesfully created"
-        redirect_to "/contacts"
       end 
     end
+    redirect_to "/contacts"
   end
 
   def edit 

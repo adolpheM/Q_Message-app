@@ -1,11 +1,17 @@
-<h1>Message</h1>
+<h1 style="color: white">Message</h1>
 
 <%= form_tag "/messages", method: :post do %>
+  <div style="color: white">
+    Title
+  </div>
   <div>
-    Title <input type="text" name="title"><br>
+    <input type="text" name="title"><br>
   </div>
   
+  <div style="color: white"><br>
   Message
+    
+  </div>
   <div>
     <textarea class="text_box" type="text" name="message"></textarea>
   </div>

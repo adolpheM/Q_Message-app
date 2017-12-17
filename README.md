@@ -23,3 +23,26 @@ Things you may want to cover:
 
 * ...
 # Q_Message-app
+
+<!-- username=innocentm20
+password=innocentm -->
+
+<!-- username=madolphe2025
+password=message1 -->
+
+
+<!-- username=kennethm1
+password=muhwezi1 -->
+
+<!-- username=dodos1
+password=mukunzi1 -->
+
+<!-- username=eugenen1
+password=niyitanga1 -->
+
+<!-- username=Ally1
+password=switch12 -->
+
+<!-- username=Frankf
+password=froux123
+ -->

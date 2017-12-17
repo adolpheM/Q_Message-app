@@ -1,7 +1,7 @@
 <%= form_tag "/groups", method: :post do %>
 
-<h1>All Contacts</h1>
-  <table>
+<h1 style="color: white">All Contacts</h1>
+  <table style="color: white">
     <tr>
       <th>Name</th>
       <th>Phone Number</th>
@@ -29,7 +29,9 @@
     </tr>
     <% end %>
   </table>
-        Group Name <input type="text" name="name">
+        <h4 style="color: darkCyan">
+          Group Name <input type="text" name="name">
+        </h4> 
         <div>
         <input type="submit" value="Create group">
         </div>

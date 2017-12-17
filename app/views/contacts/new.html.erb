@@ -1,24 +1,27 @@
 <h1 style="color: white" >Enter Your Contacts</h1>
 
+<div style="color: teal">
+  
+
 <%= form_tag "/contacts", method: :post do %>
   <div id="contactInputs">
     
   </div>
 
+<div>
+    <input type="submit" name="Create Contacts" tabindex="3">
+  </div>
+</div>
 <% end %>
+  
 <button id="addContact" style="color: blue" >Add Contact</button>
 
-<script type="text/javascript">
+<script  class="data"  type="text/javascript">
   
   $("#addContact").click(function() {
     $("#contactInputs").append("<div>Name<input type='name' name='contacts[][name]' tabindex='1'></div><div>Phone Number<input type='tel' name='contacts[][phone_number]'></div><br>");
   });
 
 
+</script><br>
 
-
-
-</script>
-  <div>
-    <input type="submit" name="Create Contacts" tabindex="3">
-  </div>

@@ -57,10 +57,14 @@
         </div>
         <!-- /.container -->
     </nav>
-  
-  <%flash.each do |name, message| %>
-  <div class="alert alert-<%= name %>" role="alert"><%= message %></div>
-  <% end %>
+  <div class="container">
+      
+      <%flash.each do |name, message| %>
+      <div class="alert alert-<%= name %> alert-dismissible" role="alert"><%= message %></div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <% end %>
+  </div>  
+
   
 
 
@@ -69,8 +73,4 @@
 
 </body>
 </html>
-<footer style="padding-bottom: 0px">
-    <div class="container text-center">
-        <p>Copyright &copy; QMessage 2017</p>
-    </div>
-</footer>
+
